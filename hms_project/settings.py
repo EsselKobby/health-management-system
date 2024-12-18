@@ -141,7 +141,7 @@ LOGOUT_REDIRECT_URL = '/'
 # AUTH_USER_MODEL = ""
 
 MESSAGE_TAGS = {
-    message.ERROR : "danger"
+    messages.ERROR : "danger"
 }
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
