@@ -70,3 +70,5 @@ This project outlines a comprehensive Hospital Management System with the follow
 * Create a virtual environment for project isolation:
    ```bash
    py -m venv venv
+
+* 
