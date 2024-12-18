@@ -73,4 +73,4 @@ This project outlines a comprehensive Hospital Management System with the follow
 
 * Project and App Initialization
    ``` base app
-python manage.py startapp base
+   python manage.py startapp base
