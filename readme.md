@@ -71,4 +71,6 @@ This project outlines a comprehensive Hospital Management System with the follow
    ```bash
    py -m venv venv
 
-* 
+* Project and App Initialization
+   ``` base app
+python manage.py startapp base
