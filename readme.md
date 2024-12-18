@@ -74,3 +74,6 @@ This project outlines a comprehensive Hospital Management System with the follow
 * Project and App Initialization:
    ```bash
    python manage.py startapp base
+
+Base App Usage:
+Appointments Booking, Service List, Doctors and many others...
