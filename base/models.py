@@ -62,12 +62,17 @@ class Prescription(models.Model):
         return f"Prescription for {self.appointment.patient.full_name}"
 
 class Billing(models.Model):
+    status = [
+        ('Paid', 'Paid'),
+        ('Unpaid', 'Unpaid'),
+    ]
+    
     patient = models.ForeignKey(patient_models.Patient, on_delete=models.SET_NULL, null=True, blank=True, related_name='billings')
     appointment = models.ForeignKey(Appointment, on_delete=models.CASCADE, related_name='billing', blank=True, null=True)
-        sub_total = models.DecimalField(max_digits=10, decimal_places=2)
+    sub_total = models.DecimalField(max_digits=10, decimal_places=2)
     tax = models.DecimalField(max_digits=10, decimal_places=2)
     total = models.DecimalField(max_digits=10, decimal_places=2)
-    status = models.CharField(max_length=120, choices=[('Paid', 'Paid'), ('Unpaid', 'Unpaid')])
+    status = models.CharField(max_length=120, choices=STATUS)
     billing_id = ShortUUIDField(length=6, max_length=10, alphabet="1234567890")
 
     date = models.DateTimeField(auto_now_add=True)
