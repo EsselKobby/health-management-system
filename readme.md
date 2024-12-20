@@ -77,3 +77,7 @@ This project outlines a comprehensive Hospital Management System with the follow
 
 Base App Usage:
 Appointments Booking, Service List, Doctors and many others...
+
+**10. App Details(Models)**
+
+* Services, Appointments, Lab Records, Prescription, 
