@@ -36,3 +36,20 @@ class Appointment(models.Model):
 
     def __str__(self):
         return f"{self.patient.full_name} with {self.doctor.full_name}"
+
+class MedicalRecord(models.Model):
+    appointment = models.ForeignKey(Appointment, on_delete= models.CASCADE)
+    diagnosis = models.TextField()
+    treatment = models.TextField()
+
+    def __str__(self):
+        return f"Medical Record for {self.appointment.patient.full_name}"
+
+class LabTest(models.Model):
+    appointment = models.ForeignKey(Appointment, on_delete=models.CASCADE)
+    test_name = models.CharField(max_length=255)
+    description = models.TextField(blank=True, null=True)
+    result = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return f"{self.test_name}"
