@@ -53,3 +53,10 @@ class LabTest(models.Model):
 
     def __str__(self):
         return f"{self.test_name}"
+
+class Prescription(models.Model):
+    appointment = models.ForeignKey(Appointment, on_delete=models.CASCADE)
+    medications = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return f"Prescription for {self.appointment.patient.full_name}"
