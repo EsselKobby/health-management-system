@@ -62,7 +62,7 @@ class Prescription(models.Model):
         return f"Prescription for {self.appointment.patient.full_name}"
 
 class Billing(models.Model):
-    status = [
+    STATUS = [
         ('Paid', 'Paid'),
         ('Unpaid', 'Unpaid'),
     ]
