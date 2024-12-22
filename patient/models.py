@@ -24,7 +24,7 @@ class Patient(models.Model):
             return f"{self.full_name}"
 
 class Notification(models.Model):
-        patient = models.ForeignKey(Doctor, on_delete=models.SET_NULL, null=True, blank=True)
+        patient = models.ForeignKey(Patient, on_delete=models.SET_NULL, null=True, blank=True)
         appointment = models.ForeignKey("base.Appointment", on_delete=models.CASCADE, null=True, blank=True, related_name="doctor_appointment_notification")
         type = models.CharField(max_length=100, choices=None)
         seen = models.BooleanField(default = False)
