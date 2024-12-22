@@ -1,6 +1,6 @@
 from django.db import models
 
-from shortuuid.django.fields import ShortUUIDField
+from shortuuid.django_fields import ShortUUIDField
 
 from doctor import models as doctor_models
 from patient import models as patient_models
